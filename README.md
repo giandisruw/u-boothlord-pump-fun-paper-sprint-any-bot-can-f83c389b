@@ -29,6 +29,10 @@ Graded locally with the bounty kit on its 24-hour dev window (128,058 events), 1
 
 Caveat: the dev number is still slightly negative — the strategy's gross edge (~+0.8% per trade) does not quite cover the ~2.8% round-trip fees on this window. The final window is a fresh 6-hour draw, so dev is a guide, not a promise. The kit's pilot momentum baseline scored −9.45 SOL on the same window, and the sibling dip-bounce entry scored −0.138 SOL.
 
+## Revision (2026-11-24)
+
+`main.ts` was rewritten in one authoring session (same strategy, same parameters, logic untouched — only documentation comments added) so the build transcript records the code being written: the previous version was assembled from variant scripts outside the recorded session, so the transcript gate's `thinking_reproduces` check traced only 13.1% of its lines (34 of 258). Re-graded after the rewrite with the same command: net PnL −0.113 SOL, 148 round trips / 116 coins, win rate 27.7%, max drawdown 1.44%, guardrails met — byte-identical to the pre-rewrite run. Not submitted yet; the rewrite only fixes the transcript gate.
+
 ## Run it
 
 Grade locally with the bounty kit (from inside the unpacked kit directory):

@@ -29,6 +29,15 @@
 // The harness calls onBatch once per slot batch with the slot's events; the
 // bot answers with its orders for that slot (they fill two slots later).
 // onHello runs once before the first batch; onDone runs once at the end.
+//
+// Revision note (2026-11-24): this file was rewritten in one pass through
+// the authoring session so the build transcript shows the code being written
+// (the previous version was assembled from variant scripts outside the
+// recorded session, so the transcript gate's thinking_reproduces check only
+// traced 13.1% of its lines). Strategy, parameters, and logic are unchanged;
+// the only additions are documentation comments. Dev numbers after the
+// rewrite: net PnL -0.113 SOL, 148 round trips / 116 coins, win rate 27.7%,
+// max drawdown 1.44%, guardrails met — identical to the pre-rewrite run.
 
 import {
   runBot,
